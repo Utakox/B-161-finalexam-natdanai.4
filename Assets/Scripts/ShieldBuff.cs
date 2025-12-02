@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShieldBuff : PowerupBase
@@ -6,8 +7,9 @@ public class ShieldBuff : PowerupBase
     {
         if (!IsEffecActive)
         {
+            Debug.Log("Shield");
             player.SetInvulinerability(true);
-            Destroy(gameObject );
+            Destroy(gameObject);
         }
     }
 }

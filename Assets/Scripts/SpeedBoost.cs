@@ -8,7 +8,9 @@ public class SpeedBoost : PowerupBase
     {
         if (!IsEffecActive)
         {
-            player.SetMoveSpeed(5f);
+            Debug.Log("Speed");
+            player.SetMoveSpeed(10f);
+            
             Destroy(gameObject);
         }
     }

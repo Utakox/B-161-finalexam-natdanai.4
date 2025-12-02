@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.DualShock;
 
@@ -28,18 +29,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void SetMoveSpeed(float newSpeed)
+    public void SetMoveSpeed(float newSpeed) // set speed ใหม่
     {
-        newSpeed = 5f;
+        moveSpeed = newSpeed;
         Debug.Log("Speed Changed");
     }
 
-    public void SetInvulinerability(bool isEnabled)
-    {
+    public void SetInvulinerability(bool isEnabled) // set อมตะ
+    { 
+        isEnabled = true;
         Debug.Log("Player is immune");
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D (Collider2D collision)
     {
         
     }
